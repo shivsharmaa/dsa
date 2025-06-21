@@ -6,24 +6,24 @@ public class Pattern18 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		int n= sc.nextInt(), row =1, nst = 1, nsp=n-1;
+		int n= sc.nextInt(), row =1, nst = 1, nsp=n/2;
 		
-		while(row <=2*n-1) {
+		
+		while(row <=n) {
 			
-			int csp=0;
-			while(csp<nsp) {
+			int csp=1;
+			while(csp<=nsp) {
 				System.out.print("  ");
 			csp++;
 			
 			}
-			int cst =0;
-			while(cst<nst){
+			int cst =1;
+			while(cst<=nst){	
 				System.out.print("* ");
 				cst++;
 			}
-
 			System.out.println();
-			if(row<n) {
+			if(row<=n/2) {
 				nsp--;
 				nst+=2;
 			}else {
@@ -32,7 +32,9 @@ public class Pattern18 {
 			}
 
 		row++;
+		
 		}
 
+	
 	}
 }

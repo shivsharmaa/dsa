@@ -18,7 +18,7 @@ public class Pattern7 {
 		while(row<=n) {
 			int csp = 0;
 			while(col<nsp) {
-				if(row==1 || row==n && col==1 || col==5) {
+				if(row==1 || row==n || col==1 || col==5) {
 					System.out.print("* ");
 				}else {
 					System.out.print(" ");
