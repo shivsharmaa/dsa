@@ -28,7 +28,7 @@ public class Pattern21 {
 			
 			int cst2=0;
 			if(row==n) {
-				cst2=1;
+				cst2++;
 			}
 			while(cst2<nst2) {
 				System.out.print("* ");

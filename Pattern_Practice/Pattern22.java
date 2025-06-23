@@ -14,8 +14,9 @@ public class Pattern22 {
 			
 			int cst1=0;
 			if(row==1) {
-				cst1=1;
+				cst1++;
 			}
+
 			while(cst1<nst1) {
 				
 				System.out.print("* ");
@@ -29,7 +30,6 @@ public class Pattern22 {
 			}
 			
 			int cst2=0;
-			
 			while(cst2<nst2) {
 				System.out.print("* ");
 			cst2++;

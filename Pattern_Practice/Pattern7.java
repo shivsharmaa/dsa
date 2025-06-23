@@ -8,27 +8,32 @@ public class Pattern7 {
 		// TODO Auto-generated method stub
 		
 		Scanner sc = new Scanner(System.in);
-		int n = sc.nextInt();
-		
-		int row=1;
-		int col=1;
-		int nst=n;
-		int nsp = n-1;
+	
+		int n = sc.nextInt(), row=1, nst=n, nsp=n-1;
 		
 		while(row<=n) {
-			int csp = 0;
-			while(col<nsp) {
-				if(row==1 || row==n || col==1 || col==5) {
+			int csp=1;
+			while(csp<=nsp) {
+				System.out.print("  ");
+			csp++;
+			}
+			
+			int cst = 1;
+			
+			while(cst<=nst) {
+				if(row==1 || row==n || cst == 1 || cst == n) {
+					
 					System.out.print("* ");
 				}else {
-					System.out.print(" ");
+					System.out.print("  ");
 				}
-				
-				col++;
+				cst++;
 			}
+			
 			System.out.println();
+			
+			nsp--;
 			row++;
-			col++;
 		}
 	}
 
