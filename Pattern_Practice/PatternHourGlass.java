@@ -13,6 +13,11 @@ public class PatternHourGlass {
 			int count1=n;
 			while(row<=2*n+1) {
 				int val=count;
+				int csp=0;
+				while(csp<nsp) {
+					System.out.print("  ");
+					csp++;
+				}
 				int cst1=1;
 				while(cst1<=nst1) {
 					System.out.print(val+" ");
@@ -24,13 +29,15 @@ public class PatternHourGlass {
 					}
 				}
 				System.out.println();
-				if(row<=n) {
+				if(row<n) {
 					count--;
 					nst1--;
+					nsp++;
 				}
 				else {
 					count++;
 					nst1++;
+					nsp--;
 				}
 				row++;
 			}
