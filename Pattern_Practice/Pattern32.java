@@ -3,39 +3,35 @@ package demo;
 import java.util.Scanner;
 
 public class Pattern32{
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		
-		Scanner sc = new Scanner(System.in);
-		int n=sc.nextInt(), row=1, nst=1, nsp=n-1;
-		
-		while(row<=n) {
-			int csp=0;
+		public static void main(String[] args) {
+			Scanner sc = new Scanner(System.in);
+			int n= sc.nextInt();
+			int nst = 1, row = 1;
 			
-			while(csp<nsp) { 
-				System.out.print("");
+			int val=1;
+			while(row<= 2 * n - 1) {
+				int cst = 1;
 				
-				
-				csp++;
-			}
-			int cst=1;
-			while(cst<=nst) {
-				if(cst%2==0 ) {
-					System.out.print("* ");
-				}else {
-					
-					System.out.print(row+" ");
-				}
+				while(cst <= nst) {
+					if(cst%2==1) {
+						
+						System.out.print(val+" ");
+					}else {
+						System.out.print("* ");
+					}
 				cst++;
+				}
 				
+				System.out.println();
+				if(row<n) {
+					val++;
+					nst+=2;
+				}else {
+					val--;
+					nst-=2;
+				}
+				row++;
 			}
-			
-			System.out.println();
-			nsp--;
-			row++;
-			nst+=2;
 		}
 	}
-
-}
